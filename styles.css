@@ -1,0 +1,130 @@
+:root{
+    --Blue: hsl(223, 87%, 63%);
+    --PaleBlue: hsl(223, 100%, 88%);
+    --LightRed: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Libre Franklin',sans-serif;
+    font-size: 20px;
+    display: flex;
+    padding: 50px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+.dashboard img{
+    height: auto;
+    width: 500px;
+}
+.logo{
+    margin-bottom: 35px;
+}
+.container h1{
+    margin-bottom: 15px;
+}
+.container h1 span{
+    color: var(--Gray);
+    font-weight: 300;
+}
+.container p{
+    color: var(--VeryDarkBlue);
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+form input{
+    height: 50px;
+    width: 100%;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid var(--PaleBlue);
+    outline: none;
+    padding-left: 25px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+form input::placeholder{
+    color: var(--PaleBlue);
+}
+form .error-text{
+    position: absolute;
+    top: 65px;
+    color: var(--LightRed);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.8rem;
+    display: none;
+}
+form button{
+    background-color: var(--Blue);
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 70px;
+    box-shadow: 0 0 20px hsla(223, 87%, 63%,0.32);
+    outline: none;
+    cursor: pointer;
+}
+.container form.error .error-text{
+    display: block;
+}
+.footer{
+    margin-top: 120px;
+}
+.footer .fab{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 10px;
+    color: var(--Blue);
+}
+.footer p{
+    color: var(--Gray);
+    margin-top: 30px;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+@media (min-width: 768px){
+    form{
+    flex-direction: row;
+    max-width: 550px;
+    margin-bottom: 50px;
+    }
+    form button{
+        margin: 0;
+        width: 45%;
+        margin-left: 15px;
+    }
+    form .error-text{
+        margin-top: 20px;
+        left: 30px;
+        top: 50px;
+    }
+}
